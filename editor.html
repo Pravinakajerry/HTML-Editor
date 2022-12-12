@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta property="og:title" content="Content Editor">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://styles.relate.design/css/styles.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <!-- <script defer src="./js/main.js"></script> -->
+        <script defer src="./js/main-v2.js"></script>
+        <title>Content Editor</title>
+    </head>
+    <body>
+        <div class="preview">
+            <div style="max-width: 75ch;">
+                <h1>Simple HTML Content Editor 📝</h1>
+                <p>
+                    1/ Simple HTML Text Editors
+                    <br>
+                    2/ Open Your HTML File
+                    <br>
+                    3/ Edit Content Visually 🪄
+                    <br>
+                    4/ Override code with updated content
+                </p>
+                <p class="guide-text">This tool is keyboard friendly, CTRL + E to Start Editing</p>
+            </div>
+        </div>
+        <div class="file-settings">
+            <div class="file-name">
+                <span>demo.html</span>
+            </div>
+            <div id="icon-help" class="icon-help clickable">
+                <img src="./images/shortcut.svg" />
+            </div>
+        </div>
+        <div class="text-style-editor clickable">
+            <div class="icon-edit-content" id="edit">
+                <p>Start</p>
+            </div>
+        </div>
+        <div id="popup" class="popup">
+            <div class="inner-popup">
+                <div class="row">
+                     <p style=line-height:90%>Shortcuts</p>
+                     <img id="close-popup" src="./images/remove.svg" class="close clickable"/>
+                </div>
+                <div class="popup-content-row">
+                    <div style="min-width: 240px" class="column">
+                        <a style="line-height: 100%; font-size: 14px; margin-top: 16px; margin-bottom: 4px;">Add Elements</a>
+                        <div class="line">
+                            <b>Add Heading 1:</b>    CTRL + 1
+                        </div>
+                        <div class="line">
+                            <b>Add Heading 2:</b>    CTRL + 2
+                        </div>
+                        <div class="line">
+                            <b>Add Heading 3:</b>    CTRL + 3
+                        </div>
+                        <div class="line">
+                            <b>Add Heading 4:</b>    CTRL + 4
+                        </div>
+                        <div class="line">
+                            <b>Add Heading 5:</b>    CTRL + 5
+                        </div>
+                        <div class="line">
+                            <b>Link:</b>    CTRL + L
+                        </div>
+                    </div>
+                    <div style="min-width: 240px" class="column">
+                        <a style="line-height: 100%; font-size: 14px; margin-top: 16px; margin-bottom: 4px;">Text Style</a>
+                        <div class="line">
+                            <b>Bold:</b>    CTRL + B
+                        </div>
+                        <div class="line">
+                            <b>Underline</b>    CTRL + U
+                        </div>
+                        <div class="line">
+                            <b>Strikethrough</b>    CTRL + X
+                        </div>
+                        <div class="line">
+                            <b>Italic</b>    CTRL + I
+                        </div>
+                    </div>
+                    <div style="min-width: 240px" class="column">
+                        <a style="line-height: 100%; font-size: 14px; margin-top: 16px; margin-bottom: 4px;">Other</a>
+                        <div class="line">
+                            <b>Start Editing:</b>    CTRL + E
+                        </div>
+                        <div class="line">
+                            <b>Save:</b>    CTRL + S
+                        </div>
+                        <div class="line">
+                            <b>Shortcuts:</b>    CTRL + ?
+                        </div>
+                        <a style="line-height: 100%; font-size: 14px; margin-top: 16px; margin-bottom: 4px;">Support</a>
+                        <div class="line">
+                            <b>Reach Us:</b>  <a href="mailto:jerryatbusiness@gmail.com" >Email</a>
+                        </div>
+                        <div class="line">
+                            <b>Report Bug:</b>   <a href="https://github.com/" target="_blank">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
