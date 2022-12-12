@@ -9,4 +9,8 @@ Please keep in mind that the application is still in development, so some featur
 
 Thank you for your interest in our project, and we look forward to working with you!
 Let's build together!🚀
+<br/>
 #open-source-software
+<br/>
+<br/>
+**Special Thanks:** https://github.com/rnbwdev for beautiful icons
