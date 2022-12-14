@@ -1,4 +1,4 @@
-console.log("Testing V2")
+console.log("Testing Prototype V2")
 
 // ------ Funcation to start and stop content editing -----------------------------------------------
 
@@ -112,7 +112,6 @@ function addPara() {
   document.execCommand('insertHTML', false, para.outerHTML);
 }
 
-
 // -------------- Funcation to Style Including Shortcuts  ------------------------------------------------------------
 
 // Create a funcation to make selected text bold in the source code when ctrl + b is pressed prevent default
@@ -207,16 +206,25 @@ document.addEventListener('keydown', function (e) {
 }
 );
 
-// When text is selected and CTRl + L is clicked ask for a link and add it to the selected text
+// When text is selected and CTRl + L is clicked ask for a link and add it to the selected text - Prevent Default and open link in new tab
 document.addEventListener('keydown', function (e) {
     if (e.ctrlKey && e.keyCode == 76) {
         e.preventDefault();
         var link = prompt('Enter a link');
         document.execCommand('createLink', false, link);
+        
     }
 }
 );
 
+// All links will be opened in a new tab
+document.addEventListener('click', function (e) {
+    if (e.target.tagName == 'A') {
+        e.preventDefault();
+        window.open(e.target.href, '_blank');
+    }   
+}
+);
 
 // ----- Interaction Section ---------
 // If ID Close-popup is clicked hide popup
@@ -252,3 +260,51 @@ document.getElementById('icon-help').addEventListener('click', function() {
     document.getElementById('popup').style.display = 'flex';
 }  
 );
+
+
+// ------ Notification Section ---------
+// class notification intally hidden and below 40px
+$('.notification').hide();
+$('.notification').css('bottom', '-40px');
+var once = true;
+document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey && e.keyCode == 69 && once) {
+        e.preventDefault();
+        $('.notification').show();
+        $('.notification').animate({
+            bottom: '24px'
+        }, 500);
+        once = false;
+    }
+}
+);
+setTimeout(function() {
+    $('.notification').fadeOut(500); // Fade out notification
+}
+, 8000); // Duration of show notification
+$('.notification').hide(); // Hide notification after 8 seconds
+
+
+
+// Loop roating animation with easing duration targeting id help-icon
+$('#icon-help').animate({
+    opacity: 0.25
+}, 1000, function() {
+    $('#icon-help').animate({
+        opacity: 1
+    }, 1000);
+}
+);
+setInterval(function() {
+    $('#icon-help').animate({
+        opacity: 0.25
+    }, 1000, function() {
+        $('#icon-help').animate({
+            opacity: 1
+        }, 1000);
+    }
+    );
+}
+, 2000);
+
+  

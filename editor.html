@@ -10,6 +10,10 @@
         <link rel="stylesheet" href="./css/styles.css">
         <!-- <script defer src="./js/main.js"></script> -->
         <script defer src="./js/main-v2.js"></script>
+        <script defer src="./js/blob.js"></script>
+        <script  type="module" src="./js/file-saver.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <title>Content Editor</title>
     </head>
     <body>
@@ -30,10 +34,10 @@
         </div>
         <div class="file-settings">
             <div class="file-name">
-                <span>demo.html</span>
+                <span id="name">filename.html</span>
             </div>
-            <div id="icon-help" class="icon-help clickable">
-                <img src="./images/shortcut.svg" />
+            <div  class="icon-help clickable">
+                <img id="icon-help" class="delete"  src="./images/shortcut.svg" />
             </div>
         </div>
         <div class="text-style-editor clickable">
@@ -41,12 +45,24 @@
                 <p>Start</p>
             </div>
         </div>
+        <div class="notification">
+            <span>Awesome! Try selecting and changing content</span>
+        </div>
         <div id="popup" class="popup">
+
+            <div class="follow-card">
+                <span>Follow for updates -- We rarely email :)</span>
+                <form action="https://formbold.com/s/91Zz3" method="POST">
+                    <input placeholder="Your Email Address" name="email" type="email"/>                    <button class="follow-button">UPDATE ME ONCE LIVE 🚀</button>
+                </form>
+            </div>
+
             <div class="inner-popup">
                 <div class="row">
                      <p style=line-height:90%>Shortcuts</p>
                      <img id="close-popup" src="./images/remove.svg" class="close clickable"/>
                 </div>
+                
                 <div class="popup-content-row">
                     <div style="min-width: 240px" class="column">
                         <a style="line-height: 100%; font-size: 14px; margin-top: 16px; margin-bottom: 4px;">Add Elements</a>
