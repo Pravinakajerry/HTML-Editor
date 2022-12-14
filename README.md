@@ -1,4 +1,4 @@
-**Status:** 🚧 WIP Application - Your contribution would be extermly helpful
+**Status:** 🚧 WIP Application - Your contribution would be helpful
 
 # HTML Content Editor
 Welcome to the HTML Content Editor project on GitHub! This application is a tool for editing HTML content, and we are always looking for contributors to help improve it.
