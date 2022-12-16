@@ -14,3 +14,5 @@ Let's build together!🚀
 <br/>
 <br/>
 **Special Thanks:** https://github.com/rnbwdev for beautiful icons
+<br/>
+**If you want to know more about us: Please visit [HTML Editor / Notion](https://www.notion.so/HTML-Editor-Public-7792866d5f6e451a82f01932de766bfc)**
