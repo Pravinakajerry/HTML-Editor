@@ -16,7 +16,6 @@
 // 4. Show popup on (CTRL + ?)
 
 
-
 // Run Fucntions run when CTRL + E is pressed - Prevent Default
 document.addEventListener('keydown', function (e) {
     if (e.ctrlKey && e.keyCode == 69) {

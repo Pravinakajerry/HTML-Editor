@@ -1,5 +1,6 @@
 // Index
 // 1. Hide popup when clicked close icon
+    // If ESC is pressed hide popup
 // 2. Show popup when clicked shortcut icon
 // 3. Hide Popup when clicked outside of popup
 // 4. Notification / Response on CTRL + E
@@ -11,7 +12,7 @@
      });
 
   document.addEventListener('keydown', function (e) {
-    if (e.keyCode == 27) {
+    if (e.keyCode == 27) { // `ESC` key
         document.getElementById('popup').style.display = 'none';
     }
 }
@@ -37,7 +38,7 @@ document.addEventListener('click', function (e) {
     $('.notification').css('bottom', '-40px');
     var once = true;
     document.addEventListener('keydown', function (e) {
-        if (e.ctrlKey && e.keyCode == 69 && once) {
+        if (e.ctrlKey && e.keyCode == 69 && once) { 
             e.preventDefault();
             $('.notification').show();
             $('.notification').animate({
