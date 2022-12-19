@@ -13,7 +13,7 @@
 
 // Add Contenteditable
 function run() {
-  var previewElements = document.getElementsByClassName('preview');
+  var previewElements = document.getElementsByClassName('preview-body');
   for (var i = 0; i < previewElements.length; i++) {
     previewElements[i].setAttribute('contenteditable', true);
   }
@@ -21,7 +21,7 @@ function run() {
 
 // Remove Contenteditable
 function stop() {
-    var previewElements = document.querySelectorAll('.preview');
+    var previewElements = document.querySelectorAll('.preview-body');
     for (var i = 0; i < previewElements.length; i++) {
         previewElements[i].removeAttribute('contenteditable');
     }
@@ -31,7 +31,7 @@ function stop() {
 document.addEventListener('keydown', function (e) {
     if (e.ctrlKey && e.keyCode == 69) {
         e.preventDefault();
-        document.getElementById('edit').innerHTML = 'CTRL + S to Save';
+        // document.getElementById('edit').innerHTML = 'CTRL + S to Save';
     }
 }
 );
