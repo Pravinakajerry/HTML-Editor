@@ -4,45 +4,109 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta property="og:title" content="Content Editor">
+        <meta property="og:title" content="Editor : Prototype">
+        <link rel="icon" href="./images/editor-favicon.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="https://styles.relate.design/css/styles.css">
-        <link rel="stylesheet" href="./css/styles.css">
-        <script src="https://code.jquery.com/jquery-3.6.2.min.js" integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.2.min.js" crossorigin="anonymous"></script>
         <script defer src="./js/main-v2.js"></script>
         <script defer src="./js/elements.js"></script>
         <script defer src="./js/interaction.js"></script>
         <script defer src="./js/shortcuts.js"></script>
-        <title>Content Editor</title>
+        <title>Editor : Prototype</title>
     </head>
-    <body>
-        <div class="preview">
-            <div style="max-width: 75ch;">
-                <h1>Simple HTML Content Editor 📝</h1>
+    <body class="preview-body">
+        <header class="preview-wrapper">
+            <div class="preview-header-link">
+                <a>
+                    <img src="./images/editor-logo.svg" />
+                </a>
+                <span>/ Prototype</span>
+            </div>
+            <a href="https://github.com/Pravinakajerry/HTML-Editor">
+                <p>Open Source -&gt;</p>
+            </a>
+        </header>
+        <section>
+            <div class="preview-wrapper">
+                <h1 class="preview-h1">Edit Visual Content, Visually <span class="key">|</span></h1>
                 <p>
-                    1/ Simple HTML Text Editors
-                    <br>
-                    2/ Open Your HTML File
-                    <br>
-                    3/ Edit Content Visually 🪄
-                    <br>
-                    4/ Override code with updated content
+                    Simple HTML Content Editor, <u>designMode </u>
+                    <br class="" />environment that updates source code
                 </p>
-                <p class="guide-text">This tool is keyboard friendly, CTRL + E to Start Editing</p>
+                <button class="preview-hero-button">Press CTRL + E</button>
+                <div class="preview-divider"></div>
+                <div class="preview-content-wrapper">
+                    <div class="preview-box">
+                        <h2 class="preview-h2">Let’s Fuck Around!</h2>
+                        <div class="preview-chip">
+                            <p>💡 Allow anyone to edit code content</p>
+                        </div>
+                        <div class="preview-chip">
+                            <p>🪄 Edit content visually and save updated file</p>
+                        </div>
+                    </div>
+                    <div class="preview-box">
+                        <div class="preview-content-block">
+                            <h3 class="preview-h3">Step 1: Start Editing (CTRL + E)</h3>
+                            <p>
+                                Yup, That’s all - now designMode / editMode is active
+                                <br class="" />-&gt; Now <span class="select-content">select content |</span> edit it  🤯
+                            </p>
+                        </div>
+                        <div class="preview-content-block">
+                            <h3 class="preview-h3">Step 2: Add Heading</h3>
+                            <p>
+                                Yes sir! You can edit, remove as well as add new text content
+                                <br />
+                                <br />Press CTRL + 1 to add &lt;h1&gt; Write Something &lt;/h1&gt;
+                            </p>
+                            <div class="preview-add-heading">
+                                <p>👋  Remove me & Press CTRL + 1</p>
+                            </div>
+                            <span class="preview-more-shortcuts">Show all shortcuts -&gt;</span>
+                        </div>
+                        <div class="preview-content-block">
+                            <h3 class="preview-h3">Step 3: Save (CTRL + S)</h3>
+                            <p>
+                                Too save updated content - Press CTRL + S,
+                                <br />That’s all Now your content is updated 👍
+                                <br />
+                                <br />Easy, right?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-divider"></div>
             </div>
-        </div>
+        </section>
+        <footer class="preview-wrapper">
+            <div class="preview-footer">
+                <a>
+                    <img src="./images/editor-logo.svg" />
+                </a>
+                <p>
+                    Made by @pravinakajerry
+                    <br />using Nocode & AI ⚔️
+                </p>
+            </div>
+            <div class="preview-footer-link">
+                <a href="https://github.com/Pravinakajerry/HTML-Editor" target="_blank">
+                    <span>Github: Open Github -&gt;</span>
+                </a>
+                <a href="mailto:jerryatbusiness@gmail.com">
+                    <span>Connect: Write Email -&gt;</span>
+                </a>
+            </div>
+        </footer>
+
         <div class="file-settings">
-            <div class="file-name">
-                <span id="name">filename.html</span>
-            </div>
             <div  class="icon-help clickable">
                 <img id="icon-help" class="delete"  src="./images/shortcut.svg" />
             </div>
         </div>
-        <div class="text-style-editor clickable">
-            <div class="icon-edit-content" id="edit">
-                <p>Start</p>
-            </div>
+    
         </div>
         <div class="notification">
             <span>Awesome! Try selecting and changing content</span>
@@ -52,7 +116,8 @@
             <div class="follow-card">
                 <span>Follow for updates -- We rarely email :)</span>
                 <form action="https://formbold.com/s/91Zz3" method="POST">
-                    <input placeholder="Your Email Address" name="email" type="email"/>                    <button class="follow-button">UPDATE ME ONCE LIVE 🚀</button>
+                    <input placeholder="Your Email Address" name="email" type="email"/>
+                    <button class="follow-button">UPDATE ME ONCE LIVE 🚀</button>
                 </form>
             </div>
 
