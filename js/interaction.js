@@ -32,28 +32,38 @@ document.addEventListener('click', function (e) {
 }
 );
 
+// ------ Notification Section ----------------------------
 
-// ------ Notification Section ---------
+    // Intally hide notification
     $('.notification').hide();
     $('.notification').css('bottom', '-40px');
-    var once = true;
+
+    // When CTRL + E is pressed show notification
     document.addEventListener('keydown', function (e) {
-        if (e.ctrlKey && e.keyCode == 69 && once) { 
+        if (e.ctrlKey && e.keyCode == 69) {
             e.preventDefault();
             $('.notification').show();
             $('.notification').animate({
                 bottom: '24px'
             }, 500);
-            once = false;
         }
     }
     );
-    setTimeout(function() {
-        $('.notification').fadeOut(500); // Fade out notification
-    }
-    , 8000); // Duration of show notification
-    $('.notification').hide(); // Hide notification after 8 seconds
 
+    // Hide notification after 8 seconds
+    setTimeout(function() {
+        $('.notification').fadeOut(500);
+    }
+    , 4000);
+
+    // Hide notification when CTRL + S is clicked
+    document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey && e.keyCode == 83) {
+            e.preventDefault();
+            $('.notification').fadeOut(500);
+        }
+    }
+    );
 
 // Micro Interaction for shortcuts icon ;)
     $('#icon-help').animate({
@@ -69,6 +79,27 @@ document.addEventListener('click', function (e) {
             opacity: 0.25
         }, 1000, function() {
             $('#icon-help').animate({
+                opacity: 1
+            }, 1000);
+        }
+        );
+    }
+    , 2000);
+
+// Select class key and add blinking animation like keyboard
+    $('.key').animate({
+        opacity: 0.25
+    }, 1000, function() {
+        $('.key').animate({
+            opacity: 1
+        }, 1000);
+    }
+    );
+    setInterval(function() {
+        $('.key').animate({
+            opacity: 0.25
+        }, 1000, function() {
+            $('.key').animate({
                 opacity: 1
             }, 1000);
         }
